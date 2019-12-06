@@ -1,0 +1,338 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/b4a58fcfd1e137bd9287244035a7c80d3d73b3af/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>Regression Test Results</title>
+
+	<style type='text/css'>
+	</style>
+</head>
+
+	<body class='extent dark default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>Regression Test Results</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Dec 5, 2019 04:43:08 PM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>3.1.5</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='50%'><span class='strong'>1</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='50%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='50%'><span class='strong'>1</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='50%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>CreateIVANIReservation</span>
+						<span class='test-time'>Dec 5, 2019 04:43:08 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 5, 2019 04:43:08 PM</span>
+	<span class='label end-time'>Dec 5, 2019 04:43:12 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+508ms</span>
+</div>
+	<div class='test-desc'>Validate the Reward Reservation (COMMITTED) Created is successfully </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>4:43:12 PM</td>
+					<td class='step-details'><textarea disabled class='code-block'>java.lang.AssertionError: 1 expectation failed.
+JSON path hotelReservation.reservationIds.confirmationNumbers[0].ihgConfirmationNumber doesn't match.
+Expected: not null
+  Actual: null
+{"code":"RDM_000403","message":"INSUFFICIENT POINTS ( 0/ 20000)(Exception GUID:[REDEMPTION-10.136.172.67-20191205214311339UTC-WSIHG00CHL])","source":"Redemption"}</textarea></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>CreateNormalReservation</span>
+						<span class='test-time'>Dec 5, 2019 04:43:12 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 5, 2019 04:43:12 PM</span>
+	<span class='label end-time'>Dec 5, 2019 04:43:12 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+728ms</span>
+</div>
+	<div class='test-desc'>Validate the Normal Reservation (COMMITTED) Created is successfully </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>4:43:12 PM</td>
+					<td class='step-details'><textarea disabled class='code-block'>{"creator":{"vendorCode":"BKGTL","vendorTypes":[2,4],"channelCode":"BT","channelSubCode":"BT","metricsCode":"BKT"},"requestor":{"vendorCode":"BKGTL","vendorTypes":[2,4],"channelCode":"BT","channelSubCode":"BT","metricsCode":"BKT"},"hotelReservation":{"reservationStatus":"BOOKED","imageStatus":"COMMITTED","createDateTime":"2019-12-05T21:43:12","lastUpdateDateTimeHotelLocalTime":"2019-12-05T21:43:12","lastUpdateDateTime":"2019-12-05T21:43:12","reservationIds":{"confirmationNumbers":[{"ihgConfirmationNumber":"24889503"}],"committedSequenceNumber":1},"productDefinitions":[{"productCode":"KNGN","productName":"1 KING BED NON SMOKING","pacCode":"0J5V","productClass":"01","maximumNumberParticipant":3,"extraPersonStart":2,"productTypeCode":"SR","attributeCodes":["AB010","NSMK"]},{"productCode":"BRK","productName":"Free Breakfast","otaCode":"RMA189","pacCode":"L4BD","productClass":"FNB","productTypeCode":"BRK","attributeCodes":["NSMK"]},{"productCode":"DIN","productName":"DIN","otaCode":"RMA191","productTypeCode":"DIN"},{"productCode":"LCH","productName":"LCH","otaCode":"RMA192","productTypeCode":"LCH"}],"attributeDefinitions":[{"code":"AB010","name":"1 King Bed","classPath":["AA","AB"]},{"code":"NSMK","name":"Non-Smoking","classPath":["SMP"]}],"classDefinitions":[{"code":"AA","name":"Beds"},{"code":"AB","name":"Rooms with 1 Bed"},{"code":"SMP","name":"Smoking Policy"}],"ratePlanDefinitions":[{"ratePlanCode":"IGCOR","name":"BEST FLEXIBLE RATE","description":"BEST AVAILABLE RATE","isFreeNight":false,"isGroupRatePlan":false,"isLoyaltyIdRequired":false,"isPackage":false,"isVoucherRequired":false,"isRewardEarned":true,"isIdRequired":false,"isRewardNight":false,"isCommissionable":true,"areAmountsConfidential":false,"isTentative":true,"types":["RPT4"]}],"userProfiles":[{"id":1,"personName":{"given":"RESTASSURED","surname":"AUTOMATION"},"telephones":[{"number":"1111111111"}]}],"segments":[{"id":1,"guestId":1,"synchroNumber":1,"checkInDate":"2019-12-22","checkOutDate":"2019-12-23","hotelMnemonic":"LONHB","status":"BOOKED","consolidatedStatus":"GUARANTEED","actionStatus":"NS","createDateTime":"2019-12-05T21:43:12","lastUpdateDateTime":"2019-12-05T21:43:12","lastUpdateDateTimeHotelLocalTime":"2019-12-05T21:43:12","offer":{"ratePlanCode":"IGCOR","policies":{"isRefundable":true,"cancellationNoShow":{"feeType":"NIGHTS","feeValue":"1","deadline":{"dateTime":"2019-12-22T16:00:00","deadlineType":"NUMBER_OF_DAYS_BEFORE_CHECKIN","deadlineValue":0},"isGracePeriod":true,"formattedDescription":"Canceling your reservation before 4:00 PM (local hotel time) on Sunday, 22 December, 2019 will result in no charge. Canceling your reservation after 4:00 PM (local hotel time) on 22 December, 2019, or failing to show, will result in a charge of 1 night per room to your credit card. Taxes may apply. Failing to call or show before check-out time after the first night of a reservation will result in cancellation of the remainder of your reservation.\r\n"},"checkinTime":"15:00:00","checkoutTime":"12:00:00"},"productUses":[{"pricingFrequency":"DAY","pricingMethod":"PER_USE","periods":[{"start":"2019-12-22","end":"2019-12-23"}],"productCode":"KNGN","quantity":1,"adults":1,"children":1,"guestCount":{"AQC10":1,"AQC8":1},"dailyExtraPersonCharge":"10.00","dailyRates":[{"start":"2019-12-22","end":"2019-12-23","dailyBaseOccupancyRate":"6000.00"}]},{"pricingFrequency":"DAY","pricingMethod":"PER_PERSON","periods":[{"start":"2019-12-22","end":"2019-12-23"}],"productCode":"BRK","quantity":1,"isProductIncludedInOffer":true},{"pricingFrequency":"DAY","pricingMethod":"PER_PERSON","periods":[{"start":"2019-12-22","end":"2019-12-23"}],"productCode":"DIN","quantity":1,"isProductIncludedInOffer":true},{"pricingFrequency":"DAY","pricingMethod":"PER_PERSON","periods":[{"start":"2019-12-22","end":"2019-12-23"}],"productCode":"LCH","quantity":1,"isProductIncludedInOffer":true}],"rates":{"hasRateChange":false,"dailyRates":[{"dailyBaseOccupancyRate":{"amountBeforeTax":"5231.44","baseAmount":"6000.00","amountAfterTax":"6000.00"},"dailyExtraOccupancyRate":{"amountBeforeTax":"0.00","baseAmount":"0.00","amountAfterTax":"0.00"},"dailyTotalRate":{"amountBeforeTax":"5231.44","baseAmount":"6000.00","amountAfterTax":"6000.00","taxGroups":[{"code":"FTT14","amount":"370.20","isIncludedInRate":true,"taxDefinitionIds":[0,2]},{"code":"FTT17","amount":"398.36","isIncludedInRate":true,"taxDefinitionIds":[1,3]}],"rateDefinitionId":0},"start":"2019-12-22","end":"2019-12-23"}],"totalRate":{"amountBeforeTax":"5231.44","baseAmount":"6000.00","amountAfterTax":"6000.00","payableAmountAfterTax":"6000.00","taxGroups":[{"code":"FTT14","amount":"0.00","isIncludedInRate":true,"taxDefinitionIds":[0,2]},{"code":"FTT17","amount":"0.00","isIncludedInRate":true,"taxDefinitionIds":[1,3]}],"totalTaxes":"768.56","daily":[{"amountType":"AVERAGE","amountBeforeTax":"5231.44","baseAmount":"6000.00","amountAfterTax":"6000.00"},{"amountType":"HIGHEST","amountBeforeTax":"5231.44","baseAmount":"6000.00","amountAfterTax":"6000.00"}]},"totalBaseOccupancyRate":{"amountBeforeTax":"5231.44","baseAmount":"6000.00","amountAfterTax":"6000.00","payableAmountAfterTax":"6000.00","taxGroups":[{"code":"FTT14","amount":"0.00","isIncludedInRate":true,"taxDefinitionIds":[0,2]},{"code":"FTT17","amount":"0.00","isIncludedInRate":true,"taxDefinitionIds":[1,3]}],"totalTaxes":"768.56","daily":[{"amountType":"AVERAGE","amountBeforeTax":"5231.44","baseAmount":"6000.00","amountAfterTax":"6000.00"},{"amountType":"HIGHEST","amountBeforeTax":"5231.44","baseAmount":"6000.00","amountAfterTax":"6000.00"}]},"totalExtraOccupancyRate":{"amountBeforeTax":"0.00","baseAmount":"0.00","amountAfterTax":"0.00","payableAmountAfterTax":"0.00","taxGroups":[{"code":"FTT14","amount":"0.00","isIncludedInRate":true,"taxDefinitionIds":[0,2]},{"code":"FTT17","amount":"0.00","isIncludedInRate":true,"taxDefinitionIds":[1,3]}],"totalTaxes":"0.00"},"ratesDefinition":{"rates":[{"id":0,"start":"2019-12-22","end":"2019-12-23","amount":"6000.00"}]},"requestedRates":[{"start":"2019-12-22","end":"2019-12-23","base":{"amount":"6000.00"}}]},"commission":{"percent":"3.00"}},"factLines":["Free access to swimming pool","No pet fee. Kennels nearby"],"creator":{"vendorCode":"BKGTL","vendorTypes":[2,4],"channelCode":"BT","channelSubCode":"BT","metricsCode":"BKT"},"requestor":{"vendorCode":"BKGTL","vendorTypes":[2,4],"channelCode":"BT","channelSubCode":"BT","metricsCode":"BKT"},"channelPreferredRate":"HIGHEST","channelExtraPersonChargeIncluded":false,"cancelByHotelOnly":false,"lateArrivalTime":"16:00:00","payment":{"paymentInformation":{"card":{"code":"VS","expireDate":"1225","number":"7411324627131111"}},"guaranteeType":"STANDARD_GUARANTEE"},"taxDefinitions":[{"id":0,"code":"FTT14","description":"Service Charge in Defined Language","formattedDescription":" 7% per night included in rate effective 22 December, 2019 thru 23 December, 2019","chargeFrequency":"PER_NIGHT","chargeUnit":"PER_PRODUCT","value":"7.00","valueType":"PERCENT","isInclusive":true,"start":"2019-12-22","end":"2019-12-23"},{"id":1,"code":"FTT17","description":"the Queen's tax","formattedDescription":" 7.5% per night included in rate effective 22 December, 2019 thru 23 December, 2019","chargeFrequency":"PER_NIGHT","chargeUnit":"PER_PRODUCT","value":"7.50","valueType":"PERCENT","isInclusive":true,"start":"2019-12-22","end":"2019-12-23"},{"id":2,"code":"FTT14","description":"Service Charge in Defined Language","formattedDescription":"4.00 GBP per night included in rate effective 22 December, 2019 thru 23 December, 2019","chargeFrequency":"PER_NIGHT","chargeUnit":"PER_PRODUCT","value":"4.00","valueType":"FLAT","isInclusive":true,"start":"2019-12-22","end":"2019-12-23"},{"id":3,"code":"FTT17","description":"the Queen's tax","formattedDescription":"6.00 GBP per night included in rate effective 22 December, 2019 thru 23 December, 2019","chargeFrequency":"PER_NIGHT","chargeUnit":"PER_PRODUCT","value":"6.00","valueType":"FLAT","isInclusive":true,"start":"2019-12-22","end":"2019-12-23"}]}],"totalReservationAmount":[{"currencyCode":"GBP","amountBeforeTax":"5231.44","amountAfterTax":"6000.00","baseAmount":"6000.00","totalTaxes":"768.56"}],"ancillaryReservations":false,"hotels":[{"hotelMnemonic":"LONHB","propertyCurrency":"GBP","marketingLines":[{"description":"Thank you for booking Intercontinental\nThe guest is confirmed in a non-smoking room"}]}],"rateCategory":{"longName":"Best Flexible Rate","shortName":"Best Flexible","longDescription":"Take advantage of our best and least restrictive publicly available rate. Changes to your reservation are usually acceptable, but always check the hotel's cancellation policy before booking for cancellation fees that may apply depending upon arrival date and hotel selected.  ","shortDescription":"Best and least restrictive public rate. Changes usually acceptable, but check hotel cancellation policy before booking.","messageToDisplay":"Thank you for making your reservation on our web site.","policyDescription":"Best and least restrictive public rate. Changes usually acceptable, but check hotel cancellation policy before booking."}}}</textarea></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<!-- category view -->
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>2</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>2</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Dec 5, 2019 04:43:08 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Dec 5, 2019 04:43:12 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 0m 4s+615ms</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 1,
+				failParent: 1,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 1,
+				
+				passChild: 1,
+				failChild: 1,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				exceptionsChild: 1,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/fca20fb7653aade98810546ab96a2a4360e3e712/dist/js/extent.js' type='text/javascript'></script>
+		
+		
+ 		<script type='text/javascript'>
+ 		</script>
+	</body>
+	
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Test Suite" allow-return-values="true">
+	<listeners>
+		<listener class-name="listeners.TestListener" />
+	</listeners>
+	<test name="Sample Test Name">
+		<parameter name="environment" value="int" />
+		<classes>
+			<class
+				name="com.git.automation.tests.<class-name>" />
+		</classes>
+	</test>
+</suite>
