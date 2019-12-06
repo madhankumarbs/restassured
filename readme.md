@@ -1,5 +1,5 @@
 # Automated Regression Using RestAssured Framework:
-This project is POC for an automated regression done on RES Services Using REST Assured Framework
+This project is POC for an automated regression done on API Services Using REST Assured Framework
 
 # Dependencies:
   - REST-assured Framework - To Facilitate API Validations
