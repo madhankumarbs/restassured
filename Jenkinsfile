@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'mvn clean install -Dtest.ENV=int -Dgroups=SmokeTest'
+                sh 'mvn clean install -Dtest.ENV=int'
             }
         }
     }
